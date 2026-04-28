@@ -7,6 +7,7 @@ ARG DBT_FUSION_VERSION=2.0.0-preview.164
 WORKDIR /app/dbt
 
 ENV PATH="/root/.local/bin:${PATH}" \
+    DBT_PROJECT_DIR=/app/dbt \
     DBT_PROFILES_DIR=/app/dbt
 
 COPY dbt/ .
