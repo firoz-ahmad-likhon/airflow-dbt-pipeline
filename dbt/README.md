@@ -2,8 +2,6 @@
 
 This dbt project transforms the raw Airflow ingestion table into analytics-ready models for BMRS data.
 
-For now, dbt is run manually with Docker Compose. Airflow currently handles ingestion only. A dedicated Airflow DAG for dbt orchestration may be added later once the transformation design is stable.
-
 ## Commands
 
 ```

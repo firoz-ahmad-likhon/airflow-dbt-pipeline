@@ -1,7 +1,7 @@
 x-airflow-common-dev: &airflow-common-dev
   build:
     context: .
-    dockerfile: infra/airflow/Dockerfile
+    dockerfile: Dockerfile
     target: ${ENV:-dev}
 
 x-dbt-common-env: &dbt-common-env
@@ -17,7 +17,7 @@ x-dbt-common-dev: &dbt-common-dev
   image: likh/dbt-pipeline:${IMAGE_TAG:-latest}
   build:
     context: .
-    dockerfile: infra/dbt/Dockerfile
+    dockerfile: dbt/Dockerfile
   environment:
     <<: *dbt-common-env
   volumes:

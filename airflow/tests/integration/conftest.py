@@ -12,3 +12,12 @@ def dag_wind_and_solar_power_generation() -> DagBag | Any:
     bag.id = "wind_and_solar_power_generation"
 
     return bag
+
+
+@pytest.fixture(scope="module")
+def dag_wind_and_solar_power_transformation() -> DagBag | Any:
+    """Initialize the wind_and_solar_power_transformation DAG."""
+    bag = DagBag().get_dag("wind_and_solar_power_transformation")
+    bag.id = "wind_and_solar_power_transformation"
+
+    return bag
